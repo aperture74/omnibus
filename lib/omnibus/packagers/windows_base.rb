@@ -116,7 +116,7 @@ module Omnibus
     # If none succeed, an exception is raised.
     #
     def sign_package(package_file)
-      success = false
+      success = true
       timestamp_servers.each do |ts|
         success = try_sign(package_file, ts)
         break if success

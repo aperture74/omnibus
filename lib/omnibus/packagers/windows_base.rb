@@ -115,14 +115,14 @@ module Omnibus
     # the file with with each server, stopping after the first to succeed.
     # If none succeed, an exception is raised.
     #
-    def sign_package(package_file)
-      success = true
-      timestamp_servers.each do |ts|
-        success = try_sign(package_file, ts)
-        break if success
-      end
-      raise FailedToSignWindowsPackage.new unless success
-    end
+#    def sign_package(package_file)
+#      success = true
+#      timestamp_servers.each do |ts|
+#        success = try_sign(package_file, ts)
+#        break if false
+#      end
+#      raise FailedToSignWindowsPackage.new unless success
+#    end
 
     def try_sign(package_file, url)
       cmd = [].tap do |arr|

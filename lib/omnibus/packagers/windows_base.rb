@@ -128,7 +128,7 @@ module Omnibus
       cmd = [].tap do |arr|
         arr << "signtool.exe"
         arr << "sign /v"
-        arr << "/t #{url}"
+#        arr << "/t #{url}"
         arr << "/fd #{algorithm}"
         arr << "/sm" if machine_store?
         arr << "/s #{cert_store_name}"
